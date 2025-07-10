@@ -3,4 +3,9 @@ framework module TTCountryFlagLabel {
     
     export *
     module * { export * }
+    
+    explicit module Private {
+        header "NSLocale+TTEmojiFlagString.h"
+        export *
+    }
 } 

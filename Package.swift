@@ -23,7 +23,11 @@ let package = Package(
                 .headerSearchPath("."),
                 .define("SWIFT_PACKAGE"),
                 .define("TARGET_OS_IPHONE", to: "1"),
-                .unsafeFlags(["-fmodules", "-fobjc-arc"])
+                .unsafeFlags(["-fmodules", "-fobjc-arc", "-fobjc-weak"])
+            ],
+            linkerSettings: [
+                .linkedFramework("UIKit"),
+                .linkedFramework("Foundation")
             ]
         )
     ]
