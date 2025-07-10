@@ -1,7 +1,0 @@
-framework module TTCountryFlagLabel {
-    header "TTCountryFlagLabel.h"
-    header "NSLocale+TTEmojiFlagString.h"
-    
-    export *
-    module * { export * }
-} 
