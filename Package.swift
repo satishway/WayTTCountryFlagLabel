@@ -20,7 +20,10 @@ let package = Package(
             path: "TTCountryFlagLabel/Classes",
             publicHeadersPath: ".",
             cSettings: [
-                .headerSearchPath(".")
+                .headerSearchPath("."),
+                .define("SWIFT_PACKAGE"),
+                .define("TARGET_OS_IPHONE", to: "1"),
+                .unsafeFlags(["-fmodules", "-fobjc-arc"])
             ]
         )
     ]

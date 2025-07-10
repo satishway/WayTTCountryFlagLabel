@@ -11,6 +11,7 @@
 
 @implementation TTCountryFlagLabel
 - (void) awakeFromNib{
+    [super awakeFromNib];
     [self setText:[super text]];
 }
 - (void) setText:(NSString *)text{
