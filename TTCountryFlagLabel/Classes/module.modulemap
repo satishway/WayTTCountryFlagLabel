@@ -1,11 +1,7 @@
 framework module TTCountryFlagLabel {
-    umbrella header "TTCountryFlagLabel.h"
+    header "TTCountryFlagLabel.h"
+    header "NSLocale+TTEmojiFlagString.h"
     
     export *
     module * { export * }
-    
-    explicit module Private {
-        header "NSLocale+TTEmojiFlagString.h"
-        export *
-    }
 } 
