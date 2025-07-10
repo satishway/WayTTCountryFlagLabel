@@ -1,0 +1,6 @@
+framework module TTCountryFlagLabel {
+    umbrella header "TTCountryFlagLabel.h"
+    
+    export *
+    module * { export * }
+} 

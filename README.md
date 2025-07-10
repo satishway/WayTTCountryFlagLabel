@@ -12,7 +12,25 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 iOS 8.3+ to get most of the countries flags, before this there were only 10 that were available in iOS.
+
 ## Installation
+
+### Swift Package Manager
+
+TTCountryFlagLabel is available through Swift Package Manager. To install it, add the following dependency to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/your-username/TTCountryFlagLabel.git", from: "1.0.0")
+]
+```
+
+Or add it directly in Xcode:
+1. Go to File → Add Package Dependencies
+2. Enter the repository URL: `https://github.com/your-username/TTCountryFlagLabel.git`
+3. Select the version you want to use
+
+### CocoaPods
 
 TTCountryFlagLabel is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
