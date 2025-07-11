@@ -9,19 +9,18 @@
 #import "NSLocale+TTEmojiFlagString.h"
 
 @implementation NSLocale (TTEmojiFlagString)
-
 + (NSString *)emojiFlagForISOCountryCode:(NSString *)countryCode {
-    if (countryCode.length != 2) {
-        return nil;
-    }
+    NSAssert(countryCode.length == 2, @"Expecting ISO country code");
     
-    NSMutableString *flag = [NSMutableString string];
-    for (int i = 0; i < countryCode.length; i++) {
-        unichar character = [countryCode characterAtIndex:i];
-        [flag appendString:[NSString stringWithFormat:@"%C", (unichar)(character + 127397)]];
-    }
+    int base = 127462 -65;
     
-    return flag;
+    wchar_t bytes[2] = {
+        base +[countryCode characterAtIndex:0],
+        base +[countryCode characterAtIndex:1]
+    };
+    
+    return [[NSString alloc] initWithBytes:bytes
+                                    length:countryCode.length *sizeof(wchar_t)
+                                  encoding:NSUTF32LittleEndianStringEncoding];
 }
-
-@end 
+@end
